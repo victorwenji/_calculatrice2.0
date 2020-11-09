@@ -6,53 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
+    
 </head>
 
 <body>
     <div class="calculatrice">
         <div class="ecran">                
-            <input type="tex" id="number" value="0" autocomplete="off" disabled />
+           <div class="operation">
+           </div>
+           <div class="resultat"> 
+            </div>
         </div>
         <div class="buttons">
             <div class="function">
-                <span class="button"data-value="">ce</span>
-                <span class="button"data-value="">cos</span>
-                <span class="button"data-value="">sin</span>
-                <span class="button"data-value="">tag</span>
+                <span class="button ce" data-Key= ""  onclick="resetNombre()">ce</span>
+                <span class="button" data-value="" onclick="calculTrigo('cos')">cos</span>
+                <span class="button" data-value="" onclick="calculTrigo('sin')">sin</span>
+                <span class="button" data-value="" onclick="calculTrigo('tan')">tan</span>
                 
                 <span class="button"data-value=""></span>
             </div>
             <div class="pavé_Numérique">
                 <div class="number">
-                    <span class="button"data-value="">7</span>
-                    <span class="button" data-value="">8</span>
-                    <span class="button" data-value="">9</span>
-                    <span class="button" data-value="">4</span>
-                    <span class="button" data-value="">5</span>
-                    <span class="button" data-value="">6</span>
-                    <span class="button" data-value="">1</span>
-                    <span class="button" data-value="">2</span>
-                    <span class="button" data-value="">3</span>
-                    <span class="button" data-value="">0</span>
-                    <span class="button" data-value="">,</span>
-                    <span class="button" data-value="">=</span>
+                    <span class="button" data-Key= "7" onclick="ajouteChiffre('7')" type="button">7</span>
+                    <span class="button" data-Key= "8" onclick="ajouteChiffre('8')" type="button">8</span>
+                    <span class="button" data-Key= "9" onclick="ajouteChiffre('9')" type="button">9</span>
+                    <span class="button" data-Key= "4" onclick="ajouteChiffre('4')" type="button">4</span>
+                    <span class="button" data-Key= "5" onclick="ajouteChiffre('5')" type="button">5</span>
+                    <span class="button" data-Key= "6" onclick="ajouteChiffre('6')" type="button">6</span>
+                    <span class="button" data-Key= "1" onclick="ajouteChiffre('1')" type="button">1</span>
+                    <span class="button" data-Key= "2" onclick="ajouteChiffre('2')" type="button">2</span>
+                    <span class="button" data-Key= "3" onclick="ajouteChiffre('3')" type="button">3</span>
+                    <span class="button" data-Key= "0" onclick="ajouteChiffre('0')" type="button">0</span>
+                    <span class="button egale" data-key="">=</span>
+                    <span class="button" data-Key= "," onclick="ajouteDecimal('.')" >,</span>
                 </div>
                 <div class="sign">
-                    <span class="button" data-value="">+</span>
-                    <span class="button" data-value="">-</span>
-                    <span class="button" data-value="">*</span>
-                    <span class="button" data-value="">/</span>
+                    <span class="button" onclick="ajouteOperation('+')">+</span>
+                    <span class="button" onclick="ajouteOperation('-')">-</span>
+                    <span class="button" onclick="ajouteOperation('*')">*</span>
+                    <span class="button" onclick="ajouteOperation('/')">/</span>
 
                 </div>
-                <div class="sign">
-                    <span class="button" data-value="">x²</span>
-                    <span class="button" data-value="">ln</span>
-                    <span class="button" data-value="">exp</span>
+                <div class="trigo">
+                    <span class="button" onclick="calculTrigo('x²')">x²</span>
+                    <span class="button" data-value="" onclick="calculTrigo('log')">log</span>
+                    <span class="button" data-value="" onclick="calculTrigo('exp')">exp</span>
                     <span class="button" data-value=""></span>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="./js/jquery-3.5.1.slim.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>

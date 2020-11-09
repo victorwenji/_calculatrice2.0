@@ -17,18 +17,24 @@ html,body{
     display: flex;
     flex-direction: column;
     /*  */
-    
-   
-   
 }
-.calculatrice .ecran{
-border:1px solid red;
-color: whitesmoke;
-width: 100%;
-height:150px;
-display: flex;
-    
+.calculatrice .ecran .operation{
+    border:1px solid #EDE7E3;
+    width: 100%;
+    height:75px;
+    color : white;
+    font-size: 50px;
 }
+
+.calculatrice .ecran .resultat{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(104, 104, 104);
+    color : white;
+    font-size: 50px;
+    display : flex;
+}
+
 .calculatrice .buttons{
     width: 100%;
     height: 100%;
@@ -41,8 +47,8 @@ display: flex;
 .calculatrice .buttons .function{
 width: 100%;
 height: fit-content;
-display: flex;
-font-size: 20px;
+display: inline-block;
+font-size: 15px;
 /*float: center;*/
 display: inline-block;
 }
@@ -65,6 +71,12 @@ display: inline-block;
     height: 288px;
     display: inline-block;
 }
+.calculatrice .buttons .pavé_Numérique .trigo{
+    width: 72px;
+    height: 288px;
+    display: inline-block;
+    font-size: 15px;
+}
 .button{
     width: 40px;
     height: 40px;
@@ -84,6 +96,7 @@ display: inline-block;
 }
 .calculatrice .buttons .function .button{
         font-size: 30px;
+        margin: 16px;
 }
 input#number{
     text-align: right;
